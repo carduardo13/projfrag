@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content> 
-            <Button id="btnDialog" text="Dialog" press="onOpenDialog" />
+            <Button id="btnDialog" text="{i18n>text}" press="onOpenDialog" />
         </content>
     </Page>
 </mvc:View>
