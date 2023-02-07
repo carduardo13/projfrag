@@ -1,5 +1,6 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -12,7 +13,7 @@ sap.ui.define([
 
             },
 
-            _getDialog: function() {
+            _getDialog: function () {
                 if (!this._oDialog) {
                     this._oDialog = sap.ui.xmlfragment("projfrag.view.FragDialo", this);
                     this.getView().addDependent(this._oDialog);
@@ -21,14 +22,13 @@ sap.ui.define([
                 return this._oDialog
             },
 
-
-            onShowDialog: function () {
-                this._getDialog().open()
-            },
-
-            onCloseDialog: function () {
-                this._getDialog().close()
-            }
+            onOpenDialog: function() {
+                this._getDialog().open();
+              },
+          
+              onCloseDialog: function() {
+                this._getDialog().close();
+              }
 
 
 
